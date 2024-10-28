@@ -25,7 +25,7 @@ def voltar_ao_menu_principal():
     main()
 
 def opcao_invalida():
-    print('Opção inválida!')
+    print('\nOpção inválida!')
     voltar_ao_menu_principal()
 
 def exibir_subtitulo(texto):
@@ -45,6 +45,11 @@ def listar_restaurantes():
         print(f'.{rastaurante}')
     voltar_ao_menu_principal()
 
+def ativar_restaurante():
+    exibir_subtitulo('Ativar restaurante')
+    #script
+    voltar_ao_menu_principal()
+
 def escolher_opcao():
     try:
         opcao_escolhida = int(input('Escolha uma opção: '))
@@ -53,7 +58,7 @@ def escolher_opcao():
         elif opcao_escolhida == 2:
             listar_restaurantes()
         elif opcao_escolhida == 3:
-            print('Ativar restaurante')
+            ativar_restaurante()
         elif opcao_escolhida == 4:
             finalizar_app()
         else:

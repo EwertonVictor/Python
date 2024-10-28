@@ -1,7 +1,7 @@
 ## O que são Exceptions em Python?
 Exceptions em Python são erros que ocorrem durante a execução de um programa, sendo usadas para sinalizar situações excepcionais que podem interromper o fluxo normal do código. A principal forma de tratar esses erros é utilizando os blocos `try except`.
 
-## [Exceptions comuns](./testes/try%20except/excep_comum.py "Verifique o script do exemplo")
+## [Exceptions comuns](./exemplos/try_except/excep_comum.py "Verifique o script do exemplo")
 ```ValueError:``` ocorre quando uma função recebe um argumento com o tipo certo, mas com o valor errado.
 ### Exemplo
 ```
@@ -11,7 +11,7 @@ Neste exemplo, passamos o valor de uma `String` para um inteiro, o que gera o va
 ```
 ValueError: invalid literal for int() with base 10: 'Hello world!'
 ```
-## [Try except](./testes/try%20except/erros.py "Verifique o script do exemplo")
+## [Try except](./exemplos/try_except/erros.py "Verifique o script do exemplo")
 Em Python, uma das formas mais eficazes de tratar esses erros é utilizando o bloco `Try` e `Except`.
 ### Exemplo:
 ```
@@ -26,7 +26,7 @@ def somar_dois_valores():
 ```
 O bloco `try` permite que você “tente” executar um bloco de código e, caso ocorra um erro, “capture” essa exceção e execute um código alternativo. o `except ValueError` captura essa exceção e exibe uma mensagem de erro apropriada.
 
-##  [Exception as](./testes/try%20except/erros_detalhado.py "Verifique o script do exemplo")
+##  [Exception as](./exemplos/try_except/erros_detalhado.py "Verifique o script do exemplo")
 Para mostrar detalhes específicos do erro, podemos usar a sintaxe except Exception as. Isso nos permite capturar a exceção em uma variável e exibir informações detalhadas
 ### Exemplo
 ```
@@ -48,7 +48,7 @@ Qualquer exceção que ocorra dentro do bloco `try` será capturada pelo `except
 ## O que é raise?
 `raise` é útil para garantir que erros críticos sejam tratados imediatamente. Isso é especialmente importante em situações onde continuar a execução do código poderia levar a resultados incorretos ou danificar dados.\
 __Veremos mais sobre isso no tópico abaixo.__
-## [RuntimeError](./testes/try%20except/erro_exec.py "Verifique o script do exemplo")
+## [RuntimeError](./exemplos/try_except/erro_exec.py "Verifique o script do exemplo")
 O `RuntimeError` é uma exceção genérica que pode ser usada para capturar erros que ocorrem durante a execução do programa. Podemos usá-lo para capturar e exibir mensagens de erro específicas
 ### Exemplo
 ```
@@ -71,7 +71,7 @@ Isso nos retornará a seguinte resposta:
 ```
 Erro de execução: Divisão por zero não é permitida.
 ```
-## [Try except else](./testes/try%20except/erros_else.py "Verifique o script do exemplo")
+## [Try except else](./exemplos/try_except/erros_else.py "Verifique o script do exemplo")
 O bloco `else` é executado apenas se o bloco `try` não gerar nenhuma exceção. Isso é útil para separar o código que deve ser executado apenas quando não há erros.
 ### Exemplo
 ```
@@ -86,7 +86,7 @@ except ValueError:
 else:
     print(f"O resultado é: {resultado}")
 ```
-## [Try except else finally](./testes/try%20except/else_finally.py "Verifique o script do exemplo")
+## [Try except else finally](./exemplos/try_except/else_finally.py "Verifique o script do exemplo")
 O bloco `finally` é executado independentemente de qualquer exceção que ocorra. Isso é útil para liberar recursos ou executar ações de limpeza. Exemplo:
 ### Exemplo
 ```
@@ -112,17 +112,7 @@ O código que será executado independentemente de qualquer exceção.
 minha_lista = [10, "Ewerton", 3.14, True, "Python"]
 ```
 os valores não precisam ser do mesmo tipo de dado. Dentro de uma mesma lista, podemos misturar valores de diferentes tipos.
-
-## [Append()](./testes/Listas/adicionar.py "Verifique o script do exemplo")
-Para adicionar um elemento a uma lista, podemos utilizar o método `append()`.
-### Exemplo
-```
-lista_de_nomes = ['Ewerton', 'Gabriel', 'Lucas', 'Angelo']
-lista_de_nomes.append('Gustavo')
-
-print(lista_de_nomes)
-```
-## [Acessando elemento em uma lista](./testes/Listas/indice.py "Verifique o script do exemplo")
+## [Acessando elemento em uma lista](./exemplos/Listas/indice.py "Verifique o script do exemplo")
 Cada elemento dentro de uma lista possui um índice numérico partindo de zero.
 ### Exemplo
 ```
@@ -134,8 +124,33 @@ Observando o exemplo acima, teremos como resultado o valor __3__. Conseguimos mo
 ```
 numeros = [1,2,3,4,5,6,7,8,9]
 numeros[2] = 21
-
-# Saída: [1,2,21,4,5,6,7,8,9]
 ```
-## [Del](./testes/Listas/deletar.py "Verifique o script do exemplo")
+Saída do terminal: `[1,2,21,4,5,6,7,8,9]`
+## [Append( )](./exemplos/Listas/adicionar.py "Verifique o script do exemplo")
+Para adicionar um elemento a uma lista, podemos utilizar o método `append()`.
+### Exemplo
+```
+lista_de_nomes = ['Ewerton', 'Gabriel', 'Lucas', 'Angelo']
+lista_de_nomes.append('Gustavo')
+
+print(lista_de_nomes)
+```
+## [Del](./exemplos/Listas/deletar.py "Verifique o script do exemplo")
 Para remover um elemento de uma lista, usamos a palavra-chave `del` junto do índice do elemento que queremos remover:
+```
+lista_de_numeros = [10,25,390,35,40,50]
+
+del lista_de_numeros[2]
+print(lista_de_numeros)
+```
+Saída do terminal:
+`[10, 25, 35, 40, 50]`
+## [Insert( )](./exemplos/Listas/inserir.py "Verifique o script do exemplo")
+insere um item na lista na posição indicada
+### Exemplo
+```
+usuarios = ['Ewerton','João','Fernando']
+
+usuarios.insert(1,'Felipe')
+```
+Saída do terminal: `['Ewerton', 'Felipe', 'João', 'Fernando']`
